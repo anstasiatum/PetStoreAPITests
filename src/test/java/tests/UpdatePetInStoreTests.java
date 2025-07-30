@@ -23,6 +23,8 @@ import static tests.TestData.soldStatus;
 import static tests.TestData.tagID;
 import static tests.TestData.tagName;
 import static tests.TestData.tags;
+import static tests.waitmethods.DeletePetByIdWithRetry.deletePetByIdWithRetry;
+import static tests.waitmethods.FindPetByIdWithRetry.findPetByIdWithRetry;
 
 @Feature("Update pets in the store")
 public class UpdatePetInStoreTests extends TestBase {
@@ -52,6 +54,7 @@ public class UpdatePetInStoreTests extends TestBase {
 
         responseBody = addPetsToStoreSteps.addPetToStore(addPetRequestBody, 200);
         petId = responseBody.getId();
+        findPetByIdWithRetry(petId);
     }
 
     @Test
@@ -79,6 +82,6 @@ public class UpdatePetInStoreTests extends TestBase {
 
     @AfterEach
     void deletePet() {
-        deletePetByIdSteps.deletePetById(petId, 200);
+        deletePetByIdWithRetry(petId);
     }
 }

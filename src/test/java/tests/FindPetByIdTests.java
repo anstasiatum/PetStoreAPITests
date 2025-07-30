@@ -23,6 +23,7 @@ import static tests.TestData.status;
 import static tests.TestData.tagID;
 import static tests.TestData.tagName;
 import static tests.TestData.tags;
+import static tests.waitmethods.FindPetByIdWithRetry.findPetByIdWithRetry;
 
 @Feature("Search for a pet by its ID")
 public class FindPetByIdTests extends TestBase {
@@ -51,6 +52,7 @@ public class FindPetByIdTests extends TestBase {
 
         responseBody = addPetsToStoreSteps.addPetToStore(requestBody, 200);
         petId = responseBody.getId();
+        findPetByIdWithRetry(petId);
     }
 
     @Test

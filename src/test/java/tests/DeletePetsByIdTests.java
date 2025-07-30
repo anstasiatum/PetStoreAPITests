@@ -21,6 +21,7 @@ import static tests.TestData.status;
 import static tests.TestData.tagID;
 import static tests.TestData.tagName;
 import static tests.TestData.tags;
+import static tests.waitmethods.FindPetByIdWithRetry.findPetByIdWithRetry;
 
 @Feature("Delete a pet by its ID")
 public class DeletePetsByIdTests extends TestBase {
@@ -49,6 +50,7 @@ public class DeletePetsByIdTests extends TestBase {
 
         creationResponseBody = addPetsToStoreSteps.addPetToStore(requestBody, 200);
         petId = creationResponseBody.getId();
+        findPetByIdWithRetry(petId);
     }
 
     @Test
