@@ -37,7 +37,6 @@ public class UpdatePetInStoreTests extends TestBase {
     private PetModel responseBody;
     private UpdateExistentPetSteps updateExistentPetSteps = new UpdateExistentPetSteps();
     private Long petId;
-    private DeletePetByIdSteps deletePetByIdSteps = new DeletePetByIdSteps();
 
     @BeforeEach
     void addPet() {
