@@ -5,6 +5,7 @@ target/
 
 ### IntelliJ IDEA ###
 /.idea/
+/.gradle/
 /.mvn/
 *.iws
 *.iml
