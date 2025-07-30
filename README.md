@@ -53,7 +53,7 @@
         <a href="https://rest-assured.io/" target="_blank">
           <img src="readmemedia/restassuredlogo.png" width="48" height="48" alt="Rest Assured" />
         </a>
-        <br>Selenoid
+        <br>Rest Assured
       </td>
       <td align="center" width="110">
         <a href="https://www.jenkins.io/" target="_blank">
