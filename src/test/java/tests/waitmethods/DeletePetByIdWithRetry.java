@@ -12,7 +12,7 @@ import static tests.TestBase.headerS;
 public class DeletePetByIdWithRetry {
     public static void deletePetByIdWithRetry(Long petId) {
         int retries = 5;
-        int waitMs = 500;
+        int waitMs = 1000;
 
         for (int i = 0; i < retries; i++) {
             Response response = given(petRequestSpec)

@@ -23,6 +23,7 @@ import static tests.TestData.status;
 import static tests.TestData.tagID;
 import static tests.TestData.tagName;
 import static tests.TestData.tags;
+import static tests.waitmethods.DeletePetByIdWithRetry.deletePetByIdWithRetry;
 import static tests.waitmethods.FindPetByIdWithRetry.findPetByIdWithRetry;
 
 @Feature("Search for a pet by its ID")
@@ -64,6 +65,6 @@ public class FindPetByIdTests extends TestBase {
 
     @AfterEach
     void deletePet() {
-        deletePetByIdSteps.deletePetById(petId, 200);
+        deletePetByIdWithRetry(petId);
     }
 }

@@ -13,8 +13,8 @@ import static tests.TestBase.headerS;
 public class FindPetByIdWithRetry {
     // Checks that the pet appeared in the DB
     public static PetModel findPetByIdWithRetry(Long petId) {
-        int retries = 5;
-        int waitMs = 500;
+        int retries = 10;
+        int waitMs = 1000;
 
         for (int i = 0; i < retries; i++) {
             Response response = given(petRequestSpec)
