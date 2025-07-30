@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import steps.AddPetsToStoreSteps;
-import steps.DeletePetByIdSteps;
 import steps.FindPetByIdSteps;
 import steps.VerifyResponsePetStep;
 
@@ -36,7 +35,6 @@ public class FindPetByIdTests extends TestBase {
     private VerifyResponsePetStep verifyResponsePetStep = new VerifyResponsePetStep();
     private PetModel responseBody;
     private Long petId;
-    private DeletePetByIdSteps deletePetByIdSteps = new DeletePetByIdSteps();
 
     @BeforeEach
     void addPet() {

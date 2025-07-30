@@ -11,7 +11,7 @@ import static tests.TestBase.headerS;
 
 public class DeletePetByIdWithRetry {
     public static void deletePetByIdWithRetry(Long petId) {
-        int retries = 5;
+        int retries = 10;
         int waitMs = 1000;
 
         for (int i = 0; i < retries; i++) {

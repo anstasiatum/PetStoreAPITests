@@ -13,8 +13,6 @@ import steps.VerifyResponsePetStep;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.given;
-import static java.lang.String.format;
 import static tests.TestData.categoryID;
 import static tests.TestData.categoryName;
 import static tests.TestData.petName;
@@ -35,7 +33,6 @@ public class AddPetsToStoreTests extends TestBase {
     private VerifyResponsePetStep verifyResponsePetStep = new VerifyResponsePetStep();
     private PetModel responseBody;
     private Long petId;
-    private DeletePetByIdSteps deletePetByIdSteps = new DeletePetByIdSteps();
 
     @Test
     @DisplayName("Add a pet to the store")
