@@ -8,11 +8,14 @@ import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.RequestSpec.petRequestSpec;
 import static specs.ResponseSpec.getResponseSpec;
+import static tests.TestBase.headerO;
+import static tests.TestBase.headerS;
 
 public class DeletePetByIdSteps {
     @Step("Send a request to find a pet by its ID")
     public PetSuccessfulDeletionResponseModel deletePetById(Long petId, int expectedCode) {
         return given(petRequestSpec)
+                .header(headerS, headerO)
                 .when()
                 .delete(format("/%d", petId))
                 .then()

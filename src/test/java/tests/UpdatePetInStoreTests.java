@@ -59,6 +59,7 @@ public class UpdatePetInStoreTests extends TestBase {
     void changePetStatus() {
         updatePetRequestBody = new PetModel(addPetRequestBody);
         updatePetRequestBody.setStatus(soldStatus);
+        updatePetRequestBody.setId(petId);
 
         responseBody = updateExistentPetSteps.updatePetInStore(updatePetRequestBody, 200);
         verifyResponsePetStep.verifyPetResponse(categoryID, categoryName, "Captain Morgan", photoUrl, tags, soldStatus, responseBody);
@@ -70,6 +71,7 @@ public class UpdatePetInStoreTests extends TestBase {
         String newPetName = "Ana Amari";
         updatePetRequestBody = new PetModel(addPetRequestBody);
         updatePetRequestBody.setName(newPetName);
+        updatePetRequestBody.setId(petId);
 
         responseBody = updateExistentPetSteps.updatePetInStore(updatePetRequestBody, 200);
         verifyResponsePetStep.verifyPetResponse(categoryID, categoryName, newPetName, photoUrl, tags, availableStatus, responseBody);

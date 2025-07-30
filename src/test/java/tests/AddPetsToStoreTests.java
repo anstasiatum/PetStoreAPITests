@@ -1,6 +1,7 @@
 package tests;
 
 import io.qameta.allure.Feature;
+import io.restassured.response.Response;
 import models.petmodel.CategoryModel;
 import models.petmodel.PetModel;
 import models.petmodel.TagModel;
@@ -13,6 +14,10 @@ import steps.VerifyResponsePetStep;
 
 import java.util.List;
 
+import static io.restassured.RestAssured.given;
+import static java.lang.String.format;
+import static specs.RequestSpec.petRequestSpec;
+import static specs.ResponseSpec.getResponseSpec;
 import static tests.TestData.categoryID;
 import static tests.TestData.categoryName;
 import static tests.TestData.petName;
@@ -50,10 +55,43 @@ public class AddPetsToStoreTests extends TestBase {
         responseBody = addPetsToStoreSteps.addPetToStore(requestBody, 200);
         petId = responseBody.getId();
         verifyResponsePetStep.verifyPetResponse(categoryID, categoryName, petName, photoUrl, tags, status, responseBody);
+        findPetByIdWithRetry(petId);
     }
 
     @AfterEach
     void deletePet() {
         deletePetByIdSteps.deletePetById(petId, 200);
+    }
+
+    public static PetModel findPetByIdWithRetry(Long petId) {
+        int retries = 5;
+        int waitMs = 500;
+
+        for (int i = 0; i < retries; i++) {
+            Response response = given(petRequestSpec)
+                    .header(headerS, headerO)
+                    .when()
+                    .get(format("/%d", petId));
+
+            if (response.getStatusCode() == 200) {
+                return response.then()
+                        .spec(getResponseSpec(200))
+                        .extract().as(PetModel.class);
+            }
+
+            try {
+                Thread.sleep(waitMs);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        return given(petRequestSpec)
+                .header(headerS, headerO)
+                .when()
+                .get(format("/%d", petId))
+                .then()
+                .spec(getResponseSpec(200))
+                .extract().as(PetModel.class);
     }
 }
