@@ -72,7 +72,6 @@
 
 - Developed using **Java 21**, **JUnit**, and **Selenide**
 - Built via **Gradle**
-- Run using **Selenoid** containers
 - Integrated build with **Jenkins**
 - Sending notifications to **Telegram**
 
