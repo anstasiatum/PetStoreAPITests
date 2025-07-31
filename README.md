@@ -53,7 +53,7 @@
         <a href="https://rest-assured.io/" target="_blank">
           <img src="readmemedia/restassuredlogo.png" width="48" height="48" alt="Rest Assured" />
         </a>
-        <br>Selenoid
+        <br>Rest Assured
       </td>
       <td align="center" width="110">
         <a href="https://www.jenkins.io/" target="_blank">
@@ -72,7 +72,6 @@
 
 - Developed using **Java 21**, **JUnit**, and **Selenide**
 - Built via **Gradle**
-- Run using **Selenoid** containers
 - Integrated build with **Jenkins**
 - Sending notifications to **Telegram**
 
@@ -90,14 +89,14 @@ The command to launch tests:
 gradle clean test
 ```
 
-## <img src="readmemedia/jenkins-original.svg" width="48" height="48" alt="Jenkins" /> [Jenkins](https://jenkins.autotests.cloud/job/RedFlagMarketingSiteTests/)
+## <img src="readmemedia/jenkins-original.svg" width="48" height="48" alt="Jenkins" /> [Jenkins](https://jenkins.autotests.cloud/job/PetStoreTestsAPI/)
 
 The project is integrated with Jenkins, where the parametrized tests can be run remotely within the QA GURU environment.
 
 <img src="" alt="Jenkins Main Page">
 //TODO:
 
-## <img src="readmemedia/Allure.svg" width="48" height="48" alt="Allure" /> [Allure report](https://jenkins.autotests.cloud/job/KupsillaWebSite/6/allure/)
+## <img src="readmemedia/Allure.svg" width="48" height="48" alt="Allure" /> [Allure report](https://jenkins.autotests.cloud/job/PetStoreTestsAPI/33/allure/)
 
 ### Allure report page
 <img src="" alt="Allure Report">
