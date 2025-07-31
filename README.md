@@ -71,8 +71,8 @@
 ## ✅ Automated scenarios
 1. Create a new pet
 2. Find a pet
-3. Update a pet's name
-4. Update a pet's status
+3. Update pet's name
+4. Update pet's status
 5. Delete a pet
 
 ## ▶️ Build
