@@ -32,13 +32,6 @@
           <img src="readmemedia/gradle-original.svg" width="48" height="48" alt="Gradle" />
         </a>
         <br>Gradle
-      </td>
-      <td align="center" width="110">
-        <a href="https://selenide.org/" target="_blank">
-          <img src="readmemedia\Selenide.svg" width="48" height="48" alt="Selenide" />
-        </a>
-        <br>Selenide
-      </td>
     </tr>
     <tr>
       <!-- Second row -->
@@ -70,7 +63,7 @@
   </table>
 </div>
 
-- Developed using **Java 21**, **JUnit**, and **Selenide**
+- Developed using **Java 21**, **JUnit**, and **Rest Assured**
 - Built via **Gradle**
 - Integrated build with **Jenkins**
 - Sending notifications to **Telegram**
