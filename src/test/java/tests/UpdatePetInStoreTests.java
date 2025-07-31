@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import steps.AddPetsToStoreSteps;
-import steps.DeletePetByIdSteps;
 import steps.UpdateExistentPetSteps;
 import steps.VerifyResponsePetStep;
 

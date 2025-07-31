@@ -8,7 +8,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import steps.AddPetsToStoreSteps;
-import steps.DeletePetByIdSteps;
 import steps.VerifyResponsePetStep;
 
 import java.util.List;
