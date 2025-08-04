@@ -86,18 +86,17 @@ gradle clean test
 
 The project is integrated with Jenkins, where the parametrized tests can be run remotely within the QA GURU environment.
 
-<img src="" alt="Jenkins Main Page">
-//TODO:
+<img src="readmemedia/JenkinsMainPage.png" alt="Jenkins Main Page">
+
 
 ## <img src="readmemedia/Allure.svg" width="48" height="48" alt="Allure" /> [Allure report](https://jenkins.autotests.cloud/job/PetStoreTestsAPI/33/allure/)
 
 ### Allure report page
-<img src="" alt="Allure Report">
-//TODO:
+<img src="readmemedia/AllureReportPage.png" alt="Allure Report">
 
 ### Each test in the report contains:
 - Test steps
-//TODO:
+- Request and Response
   
 
 ## <img src="readmemedia/Telegram.svg" width="48" height="48" alt="Telegram" /> Notifications
